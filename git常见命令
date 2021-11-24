@@ -45,7 +45,72 @@ command+x             退出
 
 git log
 
+简洁输出：git log --pretty=oneline 
+
 5.commit b9e3a0d708ee5a81ea5ff383c6dabe716eec8cf1 (HEAD -> master)
 提交到主仓库，master，有一串哈希算法得到的id
 
 6.回滚代码仓库
+
+回滚到指定版本：
+git reset --hard 哈希id
+
+回滚到上一个版本
+git reset --hard HEAD^
+
+往上回滚到前三个版本
+git reset --hard HEAD~3
+
+7.查看提交之后是否有改动
+
+git status
+
+A：未修改
+
+AM：修改
+
+Untracked：未提交
+
+modified：新文件，但未提交
+
+8.工作区和缓存区
+
+工作区：当前的工作目录
+缓存区：使用 git add 命令提交的描述文件，位于.git 下面的 index 文件中
+
+正常操作顺序就是先添加到缓存在提交
+
+git add --all  添加所有文件去缓存区
+git add .      如上，但是不同点是不记录删除操作，也就是说不会在缓存区删除已删除的文件
+
+9.将文件撤销回到最近一次修改的状态
+
+git checkout -- file 
+
+10.查看单个文件的历史版本
+
+git log filename
+
+11.删除文件
+
+git rm
+git commit
+
+12.查看提交历史
+
+git reflog
+
+13.git 基本组成框架
+
+工作区：Workspace
+缓存区：Index/Stage(较低版本的git)
+本地仓库：Repositary
+远程仓库：Remote
+
+14.
+
+
+
+
+
+
