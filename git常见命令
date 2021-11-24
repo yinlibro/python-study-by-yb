@@ -1,0 +1,51 @@
+在日常开发过程中，我们需要使用git-分布式版本控制系统，来管理我们的代码，以下是一些常见的git命令
+
+
+1.在Linux或者Debian系统中安装git
+
+sudo apt install git
+
+如果找不到，使用search命令先搜索一下
+
+sudo apt search git
+
+2.配置git环境
+
+git config --global user.name "用户名"
+git config --global user.email "邮箱"
+
+不配置也可以，远程登录时手动输入一下用户名、邮箱即可
+
+3.创建本地空仓库
+
+创建
+mkdir test
+
+进入
+cd test
+
+初始化
+git init
+
+查看隐藏目录
+ls -ah
+cd .git 
+ls
+
+新建文件添加到本地仓库
+git add               将文件添加到缓存区
+git commit            提交到本地仓库
+git commit -m         添加注释
+git commit --amend    重写上一次的提交信息
+i                     编辑
+command+o             写入       
+command+x             退出
+
+4.查看历史提交日志
+
+git log
+
+5.commit b9e3a0d708ee5a81ea5ff383c6dabe716eec8cf1 (HEAD -> master)
+提交到主仓库，master，有一串哈希算法得到的id
+
+6.回滚代码仓库
